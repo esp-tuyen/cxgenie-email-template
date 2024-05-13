@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+  <title>Confirmation: Your CX Genie Payment Update</title>
+</head>
+<body style="max-width: 600px; margin: 0 auto; font-family: Inter, sans-serif">
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <div
+    style="
+      height: 72px;
+      background-image: url('https://storage.cxgenie.ai/files/f6684591c30d4d32519b6c180e89523b.png');
+      background-position: center;
+      background-size: cover;
+    "
+  ></div>
+  <div style="background-color: #e6ecfb; padding: 2rem 1.25rem">
+    <div
+      style="
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        background-color: white;
+        color: #202225;
+      "
+    >
+      <div>
+        <p style="margin-top: 0; font-size: 0.875rem; margin-bottom: 1.25rem">
+          Dear {% if contact.FULLNAME %} {{contact.FULLNAME}}, {% else %}
+          {{contact.EMAIL}}, {% endif %}
+        </p>
+        <p
+          style="
+            font-size: 0.875rem;
+            margin-bottom: 1.25rem;
+            margin-top: 0;
+            line-height: 1.5;
+          "
+        >
+          We're reaching out to confirm that the payment method for your CX
+          Genie subscription has been successfully updated. Here's a quick
+          overview to ensure everything is in order:
+        </p>
+
+        <table
+          style="
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 1.25rem;
+          "
+        >
+          <tr>
+            <td
+              colspan="2"
+              style="
+                font-size: 0.875rem;
+                font-weight: 600;
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+                min-width: 174px;
+                max-width: 174px;
+                color: #364de7;
+              "
+            >
+              Details of Your CX Genie Subscription Plan
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                font-size: 0.875rem;
+                font-weight: 600;
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                min-width: 174px;
+                max-width: 174px;
+                border-top: none;
+              "
+            >
+              Login Email
+            </td>
+            <td
+              style="
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-left: none;
+                border-top: none;
+              "
+            >
+              <p
+                style="
+                  font-size: 0.875rem;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;
+                  overflow: hidden;
+                  margin: 0;
+                "
+              >
+                {{params.email}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                font-size: 0.875rem;
+                font-weight: 600;
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-top: none;
+                min-width: 174px;
+                max-width: 174px;
+              "
+            >
+              Your Plan
+            </td>
+            <td
+              style="
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-left: none;
+                border-top: none;
+              "
+            >
+              <p
+                style="
+                  font-size: 0.875rem;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;
+                  overflow: hidden;
+                  margin: 0;
+                "
+              >
+                {{params.plan_name}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                font-size: 0.875rem;
+                font-weight: 600;
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-top: none;
+                min-width: 174px;
+                max-width: 174px;
+              "
+            >
+              Plan Price
+            </td>
+            <td
+              style="
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-left: none;
+                border-top: none;
+              "
+            >
+              <p
+                style="
+                  font-size: 0.875rem;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;
+                  overflow: hidden;
+                  margin: 0;
+                "
+              >
+                {{params.plan_price}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                font-size: 0.875rem;
+                font-weight: 600;
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-top: none;
+                min-width: 174px;
+                max-width: 174px;
+              "
+            >
+              Billing Period
+            </td>
+            <td
+              style="
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-left: none;
+                border-top: none;
+              "
+            >
+              <p
+                style="
+                  font-size: 0.875rem;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;
+                  overflow: hidden;
+                  margin: 0;
+                "
+              >
+                {{params.billing_period}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                font-size: 0.875rem;
+                font-weight: 600;
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-top: none;
+                min-width: 174px;
+                max-width: 174px;
+              "
+            >
+              Billing Method
+            </td>
+            <td
+              style="
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-left: none;
+                border-top: none;
+              "
+            >
+              <p
+                style="
+                  font-size: 0.875rem;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;
+                  overflow: hidden;
+                  margin: 0;
+                "
+              >
+                {{params.billing_method}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                font-size: 0.875rem;
+                font-weight: 600;
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-top: none;
+                border-bottom-left-radius: 0.5rem;
+                min-width: 174px;
+                max-width: 174px;
+              "
+            >
+              Billing Method Details
+            </td>
+            <td
+              style="
+                padding: 0.75rem;
+                border: 1px solid #d6dae1;
+                border-left: none;
+                border-top: none;
+                border-bottom-right-radius: 0.5rem;
+              "
+            >
+              <p
+                style="
+                  font-size: 0.875rem;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 1;
+                  overflow: hidden;
+                  margin: 0;
+                "
+              >
+                {{params.billing_method_detals}}
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <p
+          style="
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            letter-spacing: 0.1px;
+          "
+        >
+          If you have any questions or need assistance regarding your
+          subscription or new billing method, please reach out to our support
+          team at
+          <a
+            href="mailto:hello@cxgenie.ai"
+            target="_blank"
+            style="color: #364de7"
+            >hello@cxgenie.ai</a
+          >
+          who will be happy to help.
+        </p>
+
+        <p
+          style="
+            margin-top: 0;
+            margin-bottom: 28px;
+            font-size: 0.875rem;
+            line-height: 1.5;
+          "
+        >
+          Thank you for choosing CX Genie, and we look forward to continuing to
+          support your customer engagement goals.
+        </p>
+
+        <p style="font-size: 0.875rem; margin-top: 0; margin-bottom: 0.5rem">
+          Best Regards,
+        </p>
+        <p style="font-size: 0.875rem; font-weight: 600; margin: 0">
+          Your CX Genie Team
+        </p>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #17181a; padding: 3rem 2rem">
+    <div style="margin-bottom: 1.5rem">
+      <img
+        alt="CX Genie logo"
+        src="https://storage.cxgenie.ai/files/56bb3a5a5a2179cbb80180d729998945.png"
+        style="aspect-ratio: 4; max-width: 128px"
+      />
+      <p
+        style="
+          margin-top: 0.5rem;
+          margin-bottom: 0;
+          color: #f2f3f5;
+          font-size: 14px;
+        "
+      >
+        Automate & Personalize - Transform business with AI
+      </p>
+    </div>
+    <div style="display: flex; margin-left: auto">
+      <a href="https://www.youtube.com/@CXGenie" target="_blank">
+        <img
+          alt="Youtube"
+          src="https://storage.cxgenie.ai/files/048d9b1238e78347218e24af8d6dc14c.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 1rem"
+        />
+      </a>
+      <a href="https://www.facebook.com/cxgenie.virtual.agent" target="_blank">
+        <img
+          alt="Facebook"
+          src="https://storage.cxgenie.ai/files/adc59186af69f1f2938bd231e3696e6d.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 1rem"
+        />
+      </a>
+      <a href="https://www.linkedin.com/company/cxgenie/" target="_blank">
+        <img
+          alt="LinkedIn"
+          src="https://storage.cxgenie.ai/files/49705e9acbd01a6b7588f47cfe047f7c.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 1rem"
+        />
+      </a>
+      <a href="https://discord.gg/G49bqXYW" target="_blank">
+        <img
+          alt="Discord"
+          src="https://storage.cxgenie.ai/files/8b5c60e6798cae4cdb54b88402d08f87.png"
+          style="
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+            object-fit: contain;
+          "
+        />
+      </a>
+    </div>
+    <div
+      style="
+        background-color: #2c2e33;
+        width: 100%;
+        height: 1px;
+        margin: 1.25rem 0;
+      "
+    ></div>
+    <div>
+      <div style="display: flex; margin-bottom: 1rem">
+        <img
+          alt="email"
+          src="https://storage.cxgenie.ai/files/3ba396665ee54fcd70a239397444c3bc.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
+        />
+        <a
+          href="mailto:hello@cxgenie.ai"
+          target="_blank"
+          style="
+            margin: 0;
+            font-size: 14px;
+            text-decoration: none;
+            color: #c4c9d2;
+            margin-top: 2px;
+            line-height: 1.5;
+          "
+          >hello@cxgenie.ai</a
+        >
+      </div>
+      <div style="display: flex; margin-bottom: 1rem">
+        <img
+          alt="location"
+          src="https://storage.cxgenie.ai/files/4606f51bb9af77a36c0cc769b9807dff.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
+        />
+        <a
+          href="https://maps.google.com/maps?q=18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)"
+          target="_blank"
+          style="
+            margin: 0;
+            font-size: 14px;
+            text-decoration: none;
+            color: #c4c9d2;
+            margin-top: 2px;
+            line-height: 1.5;
+          "
+        >
+          18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)
+        </a>
+      </div>
+      <div style="display: flex">
+        <img
+          alt="location"
+          src="https://storage.cxgenie.ai/files/4606f51bb9af77a36c0cc769b9807dff.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
+        />
+        <a
+          href="https://maps.google.com/maps?q=18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)"
+          target="_blank"
+          style="
+            margin: 0;
+            font-size: 14px;
+            text-decoration: none;
+            color: #c4c9d2;
+            margin-top: 2px;
+            line-height: 1.5;
+          "
+        >
+          Level 2 - 11 York St, Sydney NSW 2000, Australia
+        </a>
+      </div>
+    </div>
+  </div>
+  <br />
+</body>

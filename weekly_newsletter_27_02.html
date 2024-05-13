@@ -1,0 +1,963 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+  <title>
+    DeepMind's RoboCat, Human-Like Learning, Ethics Concerns, and More!
+  </title>
+  <style type="text/css">
+    .container {
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      background-color: white;
+      color: #202225;
+    }
+    .button {
+      padding: 0.5rem 1.5rem;
+      background-color: #364de7;
+      max-width: 241px;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white !important;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      height: 24px;
+      margin: 0 auto;
+      display: flex;
+      line-height: normal;
+    }
+    .share-button {
+      padding: 0.5rem 1.5rem;
+      background-color: #364de7;
+      max-width: 415px;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white !important;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      min-height: 24px;
+      margin: 0 auto;
+      display: flex;
+      line-height: normal;
+    }
+    @media screen and (max-width: 400px) {
+      .container {
+        padding: 1rem;
+      }
+      .button,
+      .share-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body style="max-width: 600px; margin: 0 auto; font-family: Inter, sans-serif">
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <div
+    style="
+      height: 72px;
+      background-image: url('https://storage.cxgenie.ai/files/f6684591c30d4d32519b6c180e89523b.png');
+      background-position: center;
+      background-size: cover;
+    "
+  ></div>
+  <div style="background-color: #e6ecfb; padding: 2rem 1.25rem">
+    <div class="container">
+      <h3
+        style="
+          margin-top: 0;
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 1.5;
+          margin-bottom: 6px;
+        "
+      >
+        Revolutionizing Robotics and Unlocking Human-Like Learning
+      </h3>
+      <h4
+        style="
+          margin-top: 0;
+          font-size: 1.125rem;
+          font-weight: 600;
+          line-height: 1.5;
+          margin-bottom: 28px;
+        "
+      >
+        Plus, details about CX Genie Version 2.8.1
+      </h4>
+      <!-- <p style="margin-top: 0; font-size: 0.875rem; margin-bottom: 1.25rem">
+        Hi {{contact.FULLNAME}},
+      </p> -->
+      <p
+        style="
+          line-height: 1.5;
+          margin-top: 0;
+          margin-bottom: 1.25rem;
+          font-size: 0.875rem;
+        "
+      >
+        In this week's AI news, we discuss cutting-edge advancements, ponder
+        ethical dilemmas, and uncover emerging trends reshaping the field. But
+        that's not all! Check out our latest CX Genie version 2.8.1 updates and
+        demo videos. Learn more about the update in the full
+        <a
+          href="https://cxgenie.ai/resources/releases/cxgenie-version-2.8.1?utm_source=a&utm_medium=Gmail&utm_campaign=a"
+          target="_blank"
+          style="color: #364de7"
+          >release announcement here</a
+        >. 🌟
+      </p>
+
+      <p
+        style="
+          font-size: 1.125rem;
+          font-weight: 600;
+          line-height: 1.5;
+          color: #364de7;
+          text-align: center;
+          margin-top: 0;
+          margin-bottom: 1.25rem;
+        "
+      >
+        Top 5 AI News of the Week
+      </p>
+
+      <div style="margin-left: 1rem; margin-bottom: 1.25rem">
+        <div style="display: flex; margin-bottom: 1.5rem">
+          <div
+            style="
+              margin-right: 0.5rem;
+              width: 1.5rem;
+              min-width: 1.5rem;
+              max-width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              color: white;
+              background: linear-gradient(
+                97deg,
+                #588dff -5.63%,
+                #364de7 107.57%
+              );
+            "
+          >
+            <span
+              style="
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 0.875rem;
+                line-height: 1.75;
+              "
+              >1</span
+            >
+          </div>
+          <div>
+            <p
+              style="
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              DeepMind's RoboCat: A Revolution in Robotics with AI
+            </p>
+            <p
+              style="
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+                margin: 0;
+              "
+            >
+              DeepMind introduced RoboCat, an AI model designed to operate
+              various robotic arms for performing multiple tasks, which marks a
+              significant leap in robotics and AI integration. RoboCat's ability
+              to adapt to different models and real-world scenarios suggests a
+              future where robots can learn and perform a broader range of tasks
+              with greater flexibility and efficiency. This innovation could
+              pave the way for more autonomous and capable robotic systems in
+              manufacturing, healthcare, and daily living, potentially
+              transforming industries by enhancing productivity and enabling new
+              services​​.
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; margin-bottom: 1.5rem">
+          <div
+            style="
+              margin-right: 0.5rem;
+              width: 1.5rem;
+              min-width: 1.5rem;
+              max-width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              color: white;
+              background: linear-gradient(
+                97deg,
+                #588dff -5.63%,
+                #364de7 107.57%
+              );
+            "
+          >
+            <span
+              style="
+                display: block;
+                width: 100%;
+                text-align: center;
+                line-height: 1.75;
+                font-size: 0.875rem;
+              "
+              >2</span
+            >
+          </div>
+          <div>
+            <p
+              style="
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              VRB: Training Robots by Observing Humans
+            </p>
+            <p
+              style="
+                margin: 0;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              CMU's Robotics Institute's VRB (Vision-Robotics Bridge) system
+              represents a groundbreaking approach to machine learning. VRB
+              embodies a significant step towards more intuitive and natural
+              machine learning processes by training robots to observe human
+              actions. This technology could revolutionize how robots are
+              programmed, moving from traditional coding to a more observational
+              and adaptive learning model. This could lead to robots that better
+              understand human nuances and can perform tasks in more human-like
+              ways, improving their integration into society​​.
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; margin-bottom: 1.5rem">
+          <div
+            style="
+              margin-right: 0.5rem;
+              width: 1.5rem;
+              min-width: 1.5rem;
+              max-width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              color: white;
+              background: linear-gradient(
+                97deg,
+                #588dff -5.63%,
+                #364de7 107.57%
+              );
+            "
+          >
+            <span
+              style="
+                display: block;
+                width: 100%;
+                text-align: center;
+                line-height: 1.75;
+                font-size: 0.875rem;
+              "
+              >3</span
+            >
+          </div>
+          <div>
+            <p
+              style="
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              Otter.ai's AI-powered Chatbot for Meetings
+            </p>
+            <p
+              style="
+                margin: 0;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              Otter.ai's new chatbot feature aims to make meetings more
+              productive by allowing participants to ask questions and
+              collaborate in real-time. This innovation leverages AI to
+              streamline communication and workflow, potentially transforming
+              how teams interact and work together. Otter.ai's chatbot could
+              improve productivity and facilitate better team collaboration,
+              especially in remote and hybrid work environments ​​by making
+              meetings more interactive and efficient.
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; margin-bottom: 1.5rem">
+          <div
+            style="
+              margin-right: 0.5rem;
+              width: 1.5rem;
+              min-width: 1.5rem;
+              max-width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              color: white;
+              background: linear-gradient(
+                97deg,
+                #588dff -5.63%,
+                #364de7 107.57%
+              );
+            "
+          >
+            <span
+              style="
+                display: block;
+                width: 100%;
+                text-align: center;
+                line-height: 1.75;
+                font-size: 0.875rem;
+              "
+              >4</span
+            >
+          </div>
+          <div>
+            <p
+              style="
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              EU's Call for AI Regulation
+            </p>
+            <p
+              style="
+                margin: 0;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              The European Consumer Organisation's (BEUC) urging for immediate
+              investigations into generative AI's risks highlights the growing
+              concerns over AI ethics and the potential negative impacts of AI
+              technologies. This call for regulation shows the need for a
+              balanced approach to AI development, ensuring that innovations are
+              technologically advanced, ethically responsible, and safe for
+              public use. The EU's stance on AI regulation may influence global
+              policies, pushing for standards prioritizing consumer protection
+              and ethical considerations in AI deployment​​.
+            </p>
+          </div>
+        </div>
+        <div style="display: flex">
+          <div
+            style="
+              margin-right: 0.5rem;
+              width: 1.5rem;
+              min-width: 1.5rem;
+              max-width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              color: white;
+              background: linear-gradient(
+                97deg,
+                #588dff -5.63%,
+                #364de7 107.57%
+              );
+            "
+          >
+            <span
+              style="
+                display: block;
+                width: 100%;
+                text-align: center;
+                line-height: 1.75;
+                font-size: 0.875rem;
+              "
+              >5</span
+            >
+          </div>
+          <div>
+            <p
+              style="
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              Vimeo's AI-driven Creativity Suite
+            </p>
+            <p
+              style="
+                margin: 0;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              Vimeo's suite of AI-powered tools designed to assist in
+              scriptwriting, recording, and editing is another testament to the
+              expanding role of AI in creative. These features simplify content
+              creation, making it more accessible and efficient for users. By
+              automating aspects of the creative process, such as removing
+              filler words and providing a teleprompter, Vimeo's AI tools could
+              democratize content creation, helping more individuals to produce
+              professional-quality videos without extensive training or
+              resources​​.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          background-color: #f3f5fd;
+          border-radius: 0.75rem;
+          padding: 1rem;
+          margin-bottom: 28px;
+        "
+      >
+        <p
+          style="
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+          "
+        >
+          📣 Want to share your thoughts on this newsletter?
+        </p>
+        <p
+          style="
+            font-size: 0.875rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+          "
+        >
+          Join our chat in the CX Genie WhatsApp community! 🗣️ Share feedback,
+          thoughts, or anything else about this newsletter with us and fellow
+          community members. Let's make our newsletter even better together!
+        </p>
+        <a
+          href="https://chat.whatsapp.com/FT0znCYI3422vUJ88P9vsO"
+          target="_blank"
+          class="share-button"
+        >
+          <img
+            src="https://storage.cxgenie.ai/files/8d4107ba2b68a3e10bbe1e73ab367328.png"
+            alt="whatsapp"
+            width="20"
+            height="20"
+          />
+          <span style="margin-left: 0.25rem; line-height: 1.5; width: 100%">
+            Share your thoughts - join the discussion 🚀
+          </span>
+        </a>
+      </div>
+
+      <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
+
+      <p
+        style="
+          font-size: 1.125rem;
+          font-weight: 600;
+          line-height: 1.5;
+          color: #364de7;
+          text-align: center;
+          margin-top: 0;
+          margin-bottom: 1.25rem;
+        "
+      >
+        CX Genie Weekly News & Updates
+      </p>
+
+      <p
+        style="
+          font-size: 0.875rem;
+          margin-top: 0;
+          margin-bottom: 0.75rem;
+          color: #36393f;
+          line-height: 1.5;
+        "
+      >
+        We're excited to introduce the new release from CX Genie, version 2.8.1,
+        which brings several updates and bug fixes aimed at enhancing user
+        experience and workspace functionality:
+      </p>
+
+      <ul
+        style="
+          padding: 0;
+          padding-left: 1rem;
+          margin: 0;
+          list-style-type: decimal;
+        "
+      >
+        <li
+          style="
+            font-size: 0.875rem;
+            color: #36393f;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+          "
+        >
+          Workspace Enhancements
+
+          <ul
+            style="
+              padding: 0;
+              padding-left: 0.5rem;
+              margin: 0;
+              margin-top: 0.75rem;
+              list-style-type: disc;
+              font-weight: normal;
+            "
+          >
+            <li
+              style="
+                margin-top: 0;
+                margin-bottom: 0.75rem;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              <span style="font-weight: 600">Extra personalization: </span>
+              you can now hide the "Powered by CX Genie" watermark for Pro plan
+              subscribers!
+            </li>
+            <li
+              style="
+                margin-top: 0;
+                margin-bottom: 0.75rem;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              <span style="font-weight: 600"
+                >Renamed "Agent" role to "Member"
+              </span>
+              with updated permissions. Accounts in a workspace will now have
+              either an Admin or a Member role.
+            </li>
+            <li
+              style="
+                margin-top: 0;
+                margin-bottom: 0.75rem;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              <span style="font-weight: 600"
+                >Changes to plan subscription handling and operational rights.
+              </span>
+              If an automatic payment fails for a subscribed plan, the workspace
+              reverts to the Basic plan, granting operational rights solely to
+              the workspace owner, while other members must contact the owner to
+              upgrade for continued usage.
+            </li>
+            <img
+              src="https://storage.cxgenie.ai/files/7898f35b132e7a71dd6211917e90b5f3.png"
+              style="
+                object-fit: contain;
+                max-width: 362px;
+                margin: 0 auto;
+                display: block;
+                width: 100%;
+                border-radius: 0.5rem;
+              "
+            />
+          </ul>
+        </li>
+        <li
+          style="
+            color: #36393f;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+          "
+        >
+          Bot Updates
+
+          <ul
+            style="
+              padding: 0;
+              padding-left: 0.5rem;
+              margin: 0;
+              font-weight: normal;
+              margin-top: 0.75rem;
+              list-style-type: disc;
+            "
+          >
+            <li
+              style="
+                margin-top: 0;
+                margin-bottom: 0.75rem;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              Simplified first bot creation with diverse data input options.
+            </li>
+            <li
+              style="
+                margin-top: 0;
+                margin-bottom: 0.75rem;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              Updated setup instructions for clarity. A guide will walk you
+              through the process of getting with CX Genie and your new bot. 
+            </li>
+            <li
+              style="
+                margin-top: 0;
+                margin-bottom: 0.75rem;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              <span style="font-weight: 600"
+                >Free access to Message Flow functionalities!
+              </span>
+              Message flow is now available for all subscriptions. Instead of
+              waiting for customer queries, you can now create message sequences
+              to automatically start conversations as soon as customers open the
+              chat widget.
+            </li>
+            <img
+              src="https://storage.cxgenie.ai/files/4692cc98c976fcbf61915f05451bf90c.png"
+              style="
+                object-fit: contain;
+                max-width: 362px;
+                margin: 0 auto;
+                display: block;
+                width: 100%;
+                border-radius: 0.5rem;
+              "
+            />
+          </ul>
+        </li>
+        <li
+          style="
+            font-size: 0.875rem;
+            color: #36393f;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+          "
+        >
+          Bug Fixes
+
+          <ul
+            style="
+              padding: 0;
+              padding-left: 0.5rem;
+              margin: 0;
+              margin-top: 0.75rem;
+              list-style-type: disc;
+              font-weight: normal;
+            "
+          >
+            <li
+              style="
+                margin-top: 0;
+                margin-bottom: 0.75rem;
+                font-size: 0.875rem;
+                color: #36393f;
+                line-height: 1.5;
+              "
+            >
+              Addressed issues in workspace role assignment, notification
+              redirection, workspace name display, live chat date display, and
+              login error handling.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p
+        style="
+          font-size: 0.875rem;
+          color: #36393f;
+          margin-top: 0;
+          margin-bottom: 0.75rem;
+          line-height: 1.5;
+          word-break: break-all;
+        "
+      >
+        These updates are focused on improving professionalism, customization,
+        and ease of use for CX Genie users. See the full release at
+        <a
+          href="https://bit.ly/3UTNDsq"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color: #364de7"
+          >https://bit.ly/3UTNDsq</a
+        >.
+      </p>
+
+      <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
+
+      <p
+        style="
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 1.5;
+          margin: 0;
+          margin-bottom: 0.5rem;
+        "
+      >
+        Have questions or need assistance?
+      </p>
+      <p
+        style="
+          font-size: 0.875rem;
+          line-height: 1.5;
+          margin: 0;
+          margin-bottom: 1.25rem;
+        "
+      >
+        Reach out to us at
+        <a href="mailto:hello@cxgenie.ai" target="_blank" style="color: #364de7"
+          >hello@cxgenie.ai</a
+        >
+        or
+        <a
+          href="https://meetings.hubspot.com/genie-cx"
+          target="_blank"
+          style="color: #364de7"
+          >schedule a short demo</a
+        >
+        with us – we're always happy to help!
+      </p>
+      <a
+        href="https://meetings.hubspot.com/genie-cx"
+        target="_blank"
+        style="
+          padding: 0.5rem 1.5rem;
+          background-color: #364de7;
+          max-width: 225px;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          font-weight: 600;
+          color: white;
+          text-decoration: none;
+          text-align: center;
+          margin: 0 auto 1.25rem;
+          display: block;
+        "
+        >👉 Book A Demo Here</a
+      >
+      <div
+        style="
+          background-color: #f3f5fd;
+          border-radius: 0.75rem;
+          padding: 1rem;
+          margin-bottom: 28px;
+        "
+      >
+        <p
+          style="
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+          "
+        >
+          Connect with Us on WhatsApp! 📲
+        </p>
+        <p
+          style="
+            font-size: 0.875rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+          "
+        >
+          Join the CX Genie WhatsApp community to stay updated and connect with
+          fellow AI enthusiasts and CX Genie users.
+        </p>
+        <a
+          href="https://chat.whatsapp.com/FT0znCYI3422vUJ88P9vsO"
+          target="_blank"
+          class="button"
+        >
+          <img
+            src="https://storage.cxgenie.ai/files/8d4107ba2b68a3e10bbe1e73ab367328.png"
+            alt="whatsapp"
+            width="20"
+            height="20"
+          />
+          <span style="margin-left: 0.25rem; line-height: 1.5; width: 100%">
+            Join the conversation
+          </span>
+        </a>
+      </div>
+      <p
+        style="
+          font-size: 0.875rem;
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          line-height: 1.5;
+        "
+      >
+        Thanks to all of you for your support and trust! 
+      </p>
+      <p
+        style="
+          font-size: 0.875rem;
+          margin: 0;
+          line-height: 1.5;
+          font-weight: 600;
+        "
+      >
+        Your CX Genie Team
+      </p>
+    </div>
+  </div>
+  <div style="background-color: #17181a; padding: 3rem 2rem">
+    <div style="display: flex">
+      <div>
+        <img
+          alt="CX Genie logo"
+          src="https://storage.cxgenie.ai/files/56bb3a5a5a2179cbb80180d729998945.png"
+          style="aspect-ratio: 4; max-width: 128px"
+        />
+        <p
+          style="
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+            color: #f2f3f5;
+            font-size: 14px;
+          "
+        >
+          Resolve 68% await messages by AI!
+        </p>
+      </div>
+      <div style="display: flex; margin-left: auto">
+        <a href="https://www.youtube.com/@CXGenie" target="_blank">
+          <img
+            alt="Youtube"
+            src="https://storage.cxgenie.ai/files/048d9b1238e78347218e24af8d6dc14c.png"
+            style="width: 1.5rem; height: 1.5rem; margin-right: 1rem"
+          />
+        </a>
+        <a
+          href="https://www.facebook.com/cxgenie.virtual.agent"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            src="https://storage.cxgenie.ai/files/adc59186af69f1f2938bd231e3696e6d.png"
+            style="width: 1.5rem; height: 1.5rem; margin-right: 1rem"
+          />
+        </a>
+        <a href="https://www.linkedin.com/company/cxgenie/" target="_blank">
+          <img
+            alt="LinkedIn"
+            src="https://storage.cxgenie.ai/files/49705e9acbd01a6b7588f47cfe047f7c.png"
+            style="width: 1.5rem; height: 1.5rem; margin-right: 1rem"
+          />
+        </a>
+        <a
+          href="https://chat.whatsapp.com/FT0znCYI3422vUJ88P9vsO"
+          target="_blank"
+        >
+          <img
+            alt="Whatsapp"
+            src="https://storage.cxgenie.ai/files/fd91f58a66a50b32e3a40df318acabc1.png"
+            style="width: 1.5rem; height: 1.5rem; margin-right: 1rem"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      style="
+        background-color: #2c2e33;
+        width: 100%;
+        height: 1px;
+        margin: 1.25rem 0;
+      "
+    ></div>
+    <div>
+      <div style="display: flex; margin-bottom: 1rem">
+        <img
+          alt="email"
+          src="https://storage.cxgenie.ai/files/3ba396665ee54fcd70a239397444c3bc.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
+        />
+        <a
+          href="mailto:hello@cxgenie.ai"
+          target="_blank"
+          style="
+            margin: 0;
+            font-size: 14px;
+            text-decoration: none;
+            color: #c4c9d2;
+            margin-top: 2px;
+          "
+          >hello@cxgenie.ai</a
+        >
+      </div>
+      <div style="display: flex">
+        <img
+          alt="location"
+          src="https://storage.cxgenie.ai/files/4606f51bb9af77a36c0cc769b9807dff.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
+        />
+        <a
+          href="https://maps.google.com/maps?q=18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)"
+          target="_blank"
+          style="
+            margin: 0;
+            font-size: 14px;
+            text-decoration: none;
+            color: #c4c9d2;
+            margin-top: 2px;
+          "
+        >
+          18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)
+        </a>
+      </div>
+    </div>
+  </div>
+  <br />
+</body>
