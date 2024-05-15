@@ -1,8 +1,97 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <head>
-  <title>Create Your CX Genie Chatbot Today</title>
+  <title>You has unread messages from {{customer_name}}</title>
+  <style type="text/css">
+    .container {
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      background-color: white;
+      color: #202225;
+    }
+    .button {
+      padding: 0.5rem 1rem;
+      background-color: #364de7;
+      max-width: 150px;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white !important;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      min-height: 24px;
+      margin: 0 auto;
+      display: flex;
+      line-height: 1.5;
+    }
+    .share-button {
+      padding: 0.5rem 1rem;
+      background-color: #364de7 !important;
+      max-width: 145px;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white !important;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      min-height: 24px;
+      margin: 0 auto;
+      display: flex;
+      line-height: 1.5;
+    }
+    .logo {
+      display: flex;
+    }
+    .social {
+      display: flex;
+      margin-left: auto;
+    }
+    .explore-button {
+      padding: 0.5rem 1.5rem;
+      background-color: #364de7 !important;
+      border-radius: 0.5rem;
+      margin: 0 auto 1.25rem;
+      font-size: 1rem;
+      color: white !important;
+      line-height: 1.7;
+      font-weight: 600;
+      display: block;
+      min-height: 1.5rem;
+      max-width: 200px;
+      text-decoration: none;
+      text-align: center;
+      text-wrap: balance;
+    }
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 0.5rem 1rem;
+      }
+      .button,
+      .share-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+      }
+      .social {
+        margin-left: unset;
+      }
+      .social a {
+        margin-top: 16px;
+      }
+      .logo {
+        display: block;
+      }
+    }
+  </style>
 </head>
-<body style="max-width: 600px; margin: 0 auto; font-family: Inter, sans-serif">
+<body
+  style="
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Inter, sans-serif;
+    color: #202225;
+  "
+>
   <meta charset="UTF-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -17,97 +106,136 @@
       background-image: url('https://storage.cxgenie.ai/files/f6684591c30d4d32519b6c180e89523b.png');
       background-position: center;
       background-size: cover;
-      margin: 0 auto;
     "
   ></div>
   <div style="background-color: #e6ecfb; padding: 2rem 1.25rem">
-    <div
-      style="
-        padding: 1.5rem;
-        border-radius: 0.75rem;
-        background-color: white;
-        color: #202225;
-      "
-    >
-      <h3 style="margin-top: 0; font-size: 1.25rem; font-weight: 600">
-        Unlock CX Genie's Full Potential: Your Personal Demo Awaits!
-      </h3>
-      <p style="margin-top: 0; margin-bottom: 1.25rem">
-        Hey {{contact.FULLNAME}},
-      </p>
-      <p style="margin-top: 0; margin-bottom: 1.25rem; font-size: 0.875rem">
-        It's been a minute since we last connected, and your workspace at CX
-        Genie has been a bit quiet lately – we've missed you here!
-      </p>
-      <p style="margin-top: 0; margin-bottom: 1.25rem; font-size: 0.875rem">
-        At CX Genie, we're all about taking your support game from zero to hero.
-        Although you've already set up a workspace with us, it seems you haven't
-        yet explored and enjoyed the full power of our platform and how it can
-        help elevate your business.
-      </p>
-      <p style="margin-top: 0; margin-bottom: 1.25rem; font-size: 0.875rem">
-        As the Founder of CX Genie, I'd love to set you up with a private demo
-        session so you can see the magic CX Genie can bring to your business
-        firsthand.
-      </p>
-      <a
-        href="https://meetings.hubspot.com/genie-cx"
-        target="_blank"
+    <div class="container">
+      <h1
         style="
-          padding: 0.5rem 1.5rem;
-          background-color: #364de7;
-          max-width: 366px;
-          border-radius: 0.5rem;
-          font-size: 1rem;
+          color: #2c2e33;
+          font-size: 1.5rem;
+          font-style: normal;
           font-weight: 600;
-          color: white;
-          text-decoration: none;
-          text-align: center;
-          margin: 0 auto 1.25rem;
-          display: block;
+          margin-bottom: 1.5rem;
         "
-        >👉 Book Your CX Genie Demo Here</a
       >
-      <p style="margin-top: 0; margin-bottom: 1.25rem; font-size: 0.875rem">
-        Our AI-powered Chatbot solution is like a superhero help for your
-        support team –
-        <span style="font-weight: 600">boosting efficiency, accuracy,</span> and
-        <span style="font-weight: 600">making your customers happier.</span>
-        From managing tickets to delivering precise responses, CX Genie is your
-        genie in a bottle for creating outstanding customer experiences.
+        You has unread messages from {{customer_name}}
+      </h1>
+      <p
+        style="
+          margin-bottom: 1.25rem;
+          line-height: 1.5;
+          font-size: 0.875rem;
+          margin-top: 0;
+        "
+      >
+        Hi {{name}},
       </p>
-      <p style="margin-top: 0; margin-bottom: 1.25rem; font-size: 0.875rem">
-        Don't let this opportunity to sprinkle some magic into your customer
-        support slip by. During the demo, you can ask any and all questions and
-        learn more about the time and cost savings CX Genie can achieve for your
-        business. 
+      <p
+        style="
+          margin-bottom: 1.25rem;
+          line-height: 1.5;
+          font-size: 0.875rem;
+          margin-top: 0;
+        "
+      >
+        We hope this email finds you well. We wanted to inform you that you have
+        unread messages from {{customer_name}}
       </p>
-      <p style="margin-top: 0; margin-bottom: 28px; font-size: 0.875rem">
-        If you've got any immediate questions or just want to say hi, hit reply
-        – I'm always happy to connect!
+      <div
+        style="
+          margin-bottom: 1.5rem;
+          padding: 1rem 0.75rem;
+          background-color: #f3f5fd;
+          border-radius: 0.75rem;
+        "
+      >
+        <div style="display: flex; margin-bottom: 0.75rem">
+          <img
+            src="{{customer_avatar}}"
+            alt="{{customer_name}}"
+            style="width: 2.5rem; height: 2.5rem; border-radius: 100%"
+          />
+          <div style="margin-left: 0.5rem">
+            <p
+              style="
+                font-size: 1rem;
+                line-height: 1.5;
+                margin: 0;
+                color: #2c2e33;
+              "
+            >
+              {{customer_name}}
+            </p>
+            <p
+              style="
+                font-size: 0.875rem;
+                line-height: 1.5;
+                margin: 0;
+                color: #7d828b;
+              "
+            >
+              {{created_at}}
+            </p>
+          </div>
+        </div>
+
+        <p style="line-height: 1.5; font-size: 0.875rem; margin: 0">
+          {{message}}
+        </p>
+      </div>
+      <a href="{{link}}" class="button">Go to conversation</a>
+
+      <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
+
+      <p
+        style="
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 1.5;
+          margin: 0;
+          margin-bottom: 0.5rem;
+        "
+      >
+        Need help?
       </p>
-      <p style="margin-top: 0; margin-bottom: 0.5rem; font-size: 0.875rem">
+      <p
+        style="
+          font-size: 0.875rem;
+          line-height: 1.5;
+          margin: 0;
+          margin-bottom: 1.25rem;
+          color: #36393f;
+        "
+      >
+        For inquires or assistance with this conversation, contact us at
+        <a href="mailto:hello@cxgenie.ai" target="_blank" style="color: #364de7"
+          >hello@cxgenie.ai</a
+        >
+        anytime.
+      </p>
+
+      <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
+
+      <p
+        style="
+          font-size: 0.875rem;
+          line-height: 1.5;
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+        "
+      >
         Best regards,
       </p>
       <p
         style="
-          margin-top: 0;
-          margin-bottom: 0.25rem;
           font-size: 0.875rem;
+          margin: 0;
+          line-height: 1.5;
           font-weight: 600;
         "
       >
-        Ethan Nguyen
-      </p>
-      <p
-        style="
-          margin-top: 0;
-          margin-bottom: 0.5rem;
-          font-size: 0.875rem;
-          font-weight: 600;
-        "
-      >
-        Founder, CX Genie
+        CX Genie Team
       </p>
     </div>
   </div>
