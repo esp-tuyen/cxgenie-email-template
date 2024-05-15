@@ -129,7 +129,7 @@
           margin-top: 0;
         "
       >
-        Hi {{name}},
+        Hi {{params.name}},
       </p>
       <p
         style="
@@ -164,23 +164,23 @@
         </p>
         <ul style="padding: 0; padding-left: 1.5rem">
           <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
-            Customer name: {{customer_name}}
+            Customer name: {{params.customer_name}}
           </li>
           <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
-            Customer email: {{customer_email}}
+            Customer email: {{params.customer_email}}
           </li>
           <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
-            Customer phone number: {{customer_phone_number}}
+            Customer phone number: {{params.customer_phone_number}}
           </li>
           <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
-            Bot: {{bot_name}}
+            Bot: {{params.bot_name}}
           </li>
           <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
-            Start date: {{created_at}}
+            Start date: {{params.created_at}}
           </li>
         </ul>
       </div>
-      <a href="{{link}}" class="button">Go to conversation</a>
+      <a href="{{params.link}}" class="button">Go to conversation</a>
 
       <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
 

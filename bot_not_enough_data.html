@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <head>
   <title>
-    Your bot has no idea to answer the message from {{customer_name}}
+    Your bot has no idea to answer the message from {{params.customer_name}}
   </title>
   <style type="text/css">
     .container {
@@ -121,7 +121,7 @@
           margin-bottom: 1.5rem;
         "
       >
-        Your bot has no idea to answer the message from {{customer_name}}
+        Your bot has no idea to answer the message from {{params.customer_name}}
       </h1>
       <p
         style="
@@ -131,7 +131,7 @@
           margin-top: 0;
         "
       >
-        Hi {{name}},
+        Hi {{params.name}},
       </p>
       <p
         style="
@@ -142,7 +142,7 @@
         "
       >
         We hope this email finds you well. We wanted to inform you that your bot
-        has no idea to answer the message from {{customer_name}}
+        has no idea to answer the message from {{params.customer_name}}
       </p>
       <div
         style="
@@ -154,8 +154,8 @@
       >
         <div style="display: flex; margin-bottom: 0.75rem">
           <img
-            src="{{customer_avatar}}"
-            alt="{{customer_name}}"
+            src="{{params.customer_avatar}}"
+            alt="{{params.customer_name}}"
             style="width: 2.5rem; height: 2.5rem; border-radius: 100%"
           />
           <div style="margin-left: 0.5rem">
@@ -167,7 +167,7 @@
                 color: #2c2e33;
               "
             >
-              {{customer_name}}
+              {{params.customer_name}}
             </p>
             <p
               style="
@@ -177,16 +177,16 @@
                 color: #7d828b;
               "
             >
-              {{created_at}}
+              {{params.created_at}}
             </p>
           </div>
         </div>
 
         <p style="line-height: 1.5; font-size: 0.875rem; margin: 0">
-          {{message}}
+          {{params.message}}
         </p>
       </div>
-      <a href="{{link}}" class="button">View conversation</a>
+      <a href="{{params.link}}" class="button">View conversation</a>
 
       <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
 
