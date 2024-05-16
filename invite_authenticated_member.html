@@ -120,7 +120,7 @@
           margin-top: 0;
         "
       >
-        You have been invited to {{workspace_name}}!
+        You have been invited to {{params.workspace_name}}!
       </h1>
       <p
         style="
@@ -130,7 +130,7 @@
           margin-top: 0;
         "
       >
-        Dear {{name}},
+        Dear {{params.name}},
       </p>
       <p
         style="
@@ -140,10 +140,12 @@
           margin-top: 0;
         "
       >
-        {{sender_name}} has invited you to {{workspace_name}}. You can use this
-        sign in information below to access the workspace
+        {{params.sender_name}} has invited you to {{params.workspace_name}}. You
+        can use this sign in information below to access the workspace
       </p>
-      <a href="{{link}}" target="_blank" class="button"> Go to workspace </a>
+      <a href="{{params.link}}" target="_blank" class="button">
+        Go to workspace
+      </a>
 
       <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
 
