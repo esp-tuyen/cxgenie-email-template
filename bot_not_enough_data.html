@@ -153,11 +153,35 @@
         "
       >
         <div style="display: flex; margin-bottom: 0.75rem">
+          {% if params.customer_avatar %}
           <img
             src="{{params.customer_avatar}}"
             alt="{{params.customer_name}}"
             style="width: 2.5rem; height: 2.5rem; border-radius: 100%"
           />
+          {% else %}
+          <div
+            style="
+              width: 2.5rem;
+              height: 2.5rem;
+              border-radius: 100%;
+              background-color: #364de7;
+            "
+          >
+            <p
+              style="
+                font-size: 1.125rem;
+                line-height: 2.25;
+                margin: 0;
+                text-align: center;
+                color: white !important;
+                text-transform: uppercase;
+              "
+            >
+              {{params.alternative_name}}
+            </p>
+          </div>
+          {% endif %}
           <div style="margin-left: 0.5rem">
             <p
               style="
