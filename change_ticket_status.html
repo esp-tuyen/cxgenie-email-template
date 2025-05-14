@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <head>
-  <title>You have a new message from customer support</title>
+  <title>A new ticket has been created</title>
   <style type="text/css">
     .container {
       padding: 1.5rem;
@@ -11,6 +11,22 @@
     .button {
       padding: 0.5rem 1rem;
       background-color: {{params.theme_color|default:'#364de7'}};
+      max-width: 150px;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white !important;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      min-height: 24px;
+      margin: 0 auto;
+      display: flex;
+      line-height: 1.5;
+    }
+    .share-button {
+      padding: 0.5rem 1rem;
+      background-color: {{params.theme_color|default:'#364de7'}} !important;
       max-width: 145px;
       border-radius: 0.5rem;
       font-size: 1rem;
@@ -24,30 +40,46 @@
       display: flex;
       line-height: 1.5;
     }
-    .button-view {
-      padding: 0.5rem 1rem;
-      background-color: {{params.theme_color|default:'#364de7'}};
-      max-width: 95px;
+    .logo {
+      display: flex;
+    }
+    .social {
+      display: flex;
+      margin-left: auto;
+    }
+    .explore-button {
+      padding: 0.5rem 1.5rem;
+      background-color: {{params.theme_color|default:'#364de7'}} !important;
       border-radius: 0.5rem;
+      margin: 0 auto 1.25rem;
       font-size: 1rem;
-      font-weight: 600;
       color: white !important;
+      line-height: 1.7;
+      font-weight: 600;
+      display: block;
+      min-height: 1.5rem;
+      max-width: 200px;
       text-decoration: none;
       text-align: center;
-      display: block;
-      min-height: 24px;
-      margin: 0 auto;
-      display: flex;
-      line-height: 1.5;
+      text-wrap: balance;
     }
     @media screen and (max-width: 480px) {
       .container {
         padding: 0.5rem 1rem;
       }
       .button,
-      .view {
+      .share-button {
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
+      }
+      .social {
+        margin-left: unset;
+      }
+      .social a {
+        margin-top: 16px;
+      }
+      .logo {
+        display: block;
       }
     }
   </style>
@@ -85,13 +117,14 @@
     <div class="container">
       <h1
         style="
-          font-size: 0.875rem;
+          color: #2c2e33;
+          font-size: 1.5rem;
           font-style: normal;
-          margin-top: 0;
-          margin-bottom: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
         "
       >
-        Dear {{params.name}},
+        Your Ticket status has been updated!
       </h1>
       <p
         style="
@@ -101,71 +134,89 @@
           margin-top: 0;
         "
       >
-        Your have a new message from your customer support about your ticket.
-        Please check it now!
+        Hi {{params.name}},
       </p>
-
-      <a href="{{params.link}}" class="button-view">View details</a>
-
-      <p style="line-height: 1.5; font-size: 0.875rem; margin: 1.25rem 0">
-        If you have any questions or need assistance along the way, our support
-        team is here to help. Feel free to reach out.
-      </p>
-
-      <div
+      <p
         style="
-          background-color: #f3f5fd;
-          border-radius: 0.75rem;
-          padding: 1rem 0.75rem;
           margin-bottom: 1.25rem;
+          line-height: 1.5;
+          font-size: 0.875rem;
+          margin-top: 0;
         "
       >
-        <img
-          src="https://storage.cxgenie.ai/files/45dacbabbbafa2b81e097b4b2c8dfbc1.png"
-          width="146"
-          height="29"
-          style="margin: 0 auto 1rem; display: block; object-fit: contain"
-        />
+        We hope this email finds you well. We wanted to inform you that your
+        ticket has just been updated status on your workspace.
+      </p>
+      <div
+        style="
+          margin-bottom: 1.5rem;
+          padding: 1rem 0.75rem;
+          background-color: #f3f5fd;
+          border-radius: 0.75rem;
+        "
+      >
         <p
           style="
-            font-size: 0.875rem;
-            margin-top: 0;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
             line-height: 1.5;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+            margin-top: 0;
             font-weight: 600;
           "
         >
-          🌟 Become a Part of Our Discord Family!
+          Here are some key details:
         </p>
-        <p
-          style="
-            font-size: 0.875rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-          "
-        >
-          Dive into
-          <a
-            href="https://discord.com/invite/PXVHeM7veG"
-            target="_blank"
-            style="color: {{params.theme_color|default:'#364de7'}}"
-            >CX Genie’s Discord community</a
-          >, CX Genie users & enthusiasts unite to share insights, get support,
-          and stay updated on the latest from CX Genie. By joining, you'll not
-          only connect with like-minded innovators but also gain access to
-          exclusive free add-ons and other perks!
-        </p>
-        <a
-          href="https://discord.com/invite/PXVHeM7veG"
-          target="_blank"
-          class="button"
-        >
-          <span style="margin-left: 0.25rem; line-height: 1.5; width: 100%">
-            Join server today
-          </span>
-        </a>
+        <ul style="padding: 0; padding-left: 1.5rem">
+          <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
+            Ticket name: {{params.ticket_name}}
+          </li>
+          <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
+            Ticket ID: {{params.ticket_id}}
+          </li>
+          <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
+            PIC: {{params.assigned_name}}
+          </li>
+          <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
+            Status: {{params.status}}
+          </li>
+          <li style="color: #2c2e33; line-height: 1.5; font-size: 0.875rem">
+            Date: {{params.created_at}}
+          </li>
+        </ul>
       </div>
+      <a href="{{params.link}}" class="button">View ticket details</a>
+
+      <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
+
+      <p
+        style="
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 1.5;
+          margin: 0;
+          margin-bottom: 0.5rem;
+        "
+      >
+        Need help?
+      </p>
+      <p
+        style="
+          font-size: 0.875rem;
+          line-height: 1.5;
+          margin: 0;
+          margin-bottom: 1.25rem;
+          color: #36393f;
+        "
+      >
+        For inquires or assistance with this conversation, contact us at
+        <a href="{{params.contact_email|default:'mailto:hello@cxgenie.ai'}}" target="_blank" style="color: {{params.theme_color|default:'#364de7'}}"
+          >{{params.contact_email|default:'hello@cxgenie.ai'}}</a
+        >
+        anytime.
+      </p>
+
+      <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
 
       <p
         style="

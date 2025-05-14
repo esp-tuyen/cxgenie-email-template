@@ -10,7 +10,7 @@
     }
     .button {
       padding: 0.5rem 1rem;
-      background-color: #364de7;
+      background-color: {{params.theme_color|default:'#364de7'}};
       max-width: 135px;
       border-radius: 0.5rem;
       font-size: 1rem;
@@ -26,7 +26,7 @@
     }
     .share-button {
       padding: 0.5rem 1rem;
-      background-color: #364de7 !important;
+      background-color: {{params.theme_color|default:'#364de7'}} !important;
       max-width: 145px;
       border-radius: 0.5rem;
       font-size: 1rem;
@@ -49,7 +49,7 @@
     }
     .explore-button {
       padding: 0.5rem 1.5rem;
-      background-color: #364de7 !important;
+      background-color: {{params.theme_color|default:'#364de7'}} !important;
       border-radius: 0.5rem;
       margin: 0 auto 1.25rem;
       font-size: 1rem;
@@ -101,19 +101,21 @@
     rel="stylesheet"
   />
   <a
-    href="https://www.cxgenie.ai/?utm_source=email&utm_campaign=email_header"
+    href="{{params.header_link|default:'https://www.cxgenie.ai/?utm_source=email&utm_campaign=email_header'}}"
     target="_blank"
   >
     <div
       style="
         height: 72px;
-        background-image: url('https://storage.cxgenie.ai/files/f6684591c30d4d32519b6c180e89523b.png');
+        background-image: url('{{params.header_url|default:'https://storage.cxgenie.ai/files/f6684591c30d4d32519b6c180e89523b.png'}}');
         background-position: center;
         background-size: cover;
       "
     ></div>
   </a>
-  <div style="background-color: #e6ecfb; padding: 2rem 1.25rem">
+  <div
+    style="background-color: {{params.background|default:'#e6ecfb'}}; padding: 2rem 1.25rem"
+  >
     <div class="container">
       <h1
         style="
@@ -153,7 +155,7 @@
         target="_blank"
         style="
           padding: 0.5rem 1rem;
-          background-color: #364de7;
+          background-color: {{params.theme_color|default:'#364de7'}};
           max-width: 135px;
           border-radius: 0.5rem;
           font-size: 1rem;
@@ -193,14 +195,17 @@
         "
       >
         Reach out to us at
-        <a href="mailto:hello@cxgenie.ai" target="_blank" style="color: #364de7"
-          >hello@cxgenie.ai</a
+        <a
+          href="{{params.contact_email|default:'mailto:hello@cxgenie.ai'}}"
+          target="_blank"
+          style="color: {{params.theme_color|default:'#364de7'}}"
+          >{{params.contact_email|default:'hello@cxgenie.ai'}}</a
         >
         or
         <a
-          href="https://meetings.hubspot.com/genie-cx"
+          href="{{params.link|default:'https://meetings.hubspot.com/genie-cx'}}"
           target="_blank"
-          style="color: #364de7"
+          style="color: {{params.theme_color|default:'#364de7'}}"
           >schedule a short demo</a
         >
         with us – we're always happy to help!
@@ -211,7 +216,7 @@
         target="_blank"
         style="
           padding: 0.5rem 1.5rem;
-          background-color: #364de7;
+          background-color: {{params.theme_color|default:'#364de7'}};
           max-width: 175px;
           border-radius: 0.5rem;
           font-size: 1rem;
@@ -241,10 +246,19 @@
   <div style="background-color: #17181a; padding: 3rem 2rem">
     <div style="margin-bottom: 1.5rem">
       <img
+        {%
+        if
+        not
+        params.is_custom_settings
+        %}
         alt="CX Genie logo"
-        src="https://storage.cxgenie.ai/files/56bb3a5a5a2179cbb80180d729998945.png"
+        {%
+        endif
+        %}
+        src="{{params.footer_url|default:'https://storage.cxgenie.ai/files/56bb3a5a5a2179cbb80180d729998945.png'}}"
         style="aspect-ratio: 4; max-width: 128px"
       />
+      {% if not params.is_custom_settings %}
       <p
         style="
           margin-top: 0.5rem;
@@ -255,7 +269,9 @@
       >
         Automate & Personalize - Transform business with AI
       </p>
+      {% endif %}
     </div>
+    {% if not params.is_custom_settings %}
     <div style="display: flex; margin-left: auto">
       <a href="https://www.youtube.com/@CXGenie" target="_blank">
         <img
@@ -291,6 +307,7 @@
         />
       </a>
     </div>
+    {% endif %}
     <div
       style="
         background-color: #2c2e33;
@@ -307,7 +324,7 @@
           style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
         />
         <a
-          href="mailto:hello@cxgenie.ai"
+          href="{{params.contact_email|default:'mailto:hello@cxgenie.ai'}}"
           target="_blank"
           style="
             margin: 0;
@@ -317,7 +334,7 @@
             margin-top: 2px;
             line-height: 1.5;
           "
-          >hello@cxgenie.ai</a
+          >{{params.contact_email|default:'hello@cxgenie.ai'}}</a
         >
       </div>
       <div style="display: flex; margin-bottom: 1rem">
@@ -327,7 +344,7 @@
           style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
         />
         <a
-          href="https://maps.google.com/maps?q=18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)"
+          href="{{params.contact_company_address|default:'https://maps.google.com/maps?q=18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)'}}"
           target="_blank"
           style="
             margin: 0;
@@ -338,9 +355,11 @@
             line-height: 1.5;
           "
         >
-          18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)
+          {{params.contact_company_address|default:'18 Sin Ming Lane, #07-13
+          Midview City, Singapore (573960)'}}
         </a>
       </div>
+      {% if params.is_custom_settings %}
       <div style="display: flex">
         <img
           alt="location"
@@ -362,6 +381,7 @@
           Level 2 - 11 York St, Sydney NSW 2000, Australia
         </a>
       </div>
+      {% endif %}
     </div>
   </div>
   <br />

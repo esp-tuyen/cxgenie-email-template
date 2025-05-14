@@ -11,15 +11,22 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  <div
-    style="
-      height: 72px;
-      background-image: url('https://storage.cxgenie.ai/files/609910792c24981cdb7ff9998df62396.png');
+  <a
+    href="{{params.header_link|default:'https://www.cxgenie.ai/?utm_source=email&utm_campaign=email_header'}}"
+    target="_blank"
+  >
+    <div
+      style="
+        height: 72px;
+      background-image: url('{{params.header_url|default:'https://storage.cxgenie.ai/files/609910792c24981cdb7ff9998df62396.png'}}');
       background-position: center;
       background-size: cover;
     "
-  ></div>
-  <div style="background-color: #e6ecfb; padding: 2rem 1.25rem">
+    ></div>
+  </a>
+  <div
+    style="background-color: {{params.background|default:'#e6ecfb'}}; padding: 2rem 1.25rem"
+  >
     <div
       style="
         padding: 1.5rem;
@@ -182,7 +189,7 @@
                 height: 1.5rem;
                 border-radius: 50%;
                 color: white;
-                background: #364de7;
+                background: {{params.theme_color|default:'#364de7'}};
               "
             >
               <span style="font-size: 14px"
@@ -222,7 +229,7 @@
                 height: 1.5rem;
                 border-radius: 50%;
                 color: white;
-                background: #364de7;
+                background: {{params.theme_color|default:'#364de7'}};
               "
             >
               <span style="font-size: 14px"
@@ -260,7 +267,7 @@
                 height: 1.5rem;
                 border-radius: 50%;
                 color: white;
-                background: #364de7;
+                background: {{params.theme_color|default:'#364de7'}};
               "
             >
               <span style="font-size: 14px"
@@ -300,7 +307,7 @@
                 height: 1.5rem;
                 border-radius: 50%;
                 color: white;
-                background: #364de7;
+                background: {{params.theme_color|default:'#364de7'}};
               "
             >
               <span style="font-size: 14px"

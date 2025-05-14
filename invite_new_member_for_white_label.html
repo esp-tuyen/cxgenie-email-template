@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+  <title>🚀 Top 5 in AI This Week + Latest Product Updates</title>
+  <style type="text/css">
+    .container {
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      background-color: white;
+      color: #202225;
+    }
+    .button {
+      padding: 0.5rem 1rem;
+      background-color: {{params.theme_color|default:'#364de7'}};
+      max-width: 135px;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white !important;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      min-height: 24px;
+      margin: 0 auto;
+      display: flex;
+      line-height: 1.5;
+    }
+    .share-button {
+      padding: 0.5rem 1rem;
+      background-color: {{params.theme_color|default:'#364de7'}} !important;
+      max-width: 145px;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white !important;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      min-height: 24px;
+      margin: 0 auto;
+      display: flex;
+      line-height: 1.5;
+    }
+    .logo {
+      display: flex;
+    }
+    .social {
+      display: flex;
+      margin-left: auto;
+    }
+    .explore-button {
+      padding: 0.5rem 1.5rem;
+      background-color: {{params.theme_color|default:'#364de7'}} !important;
+      border-radius: 0.5rem;
+      margin: 0 auto 1.25rem;
+      font-size: 1rem;
+      color: white !important;
+      line-height: 1.7;
+      font-weight: 600;
+      display: block;
+      min-height: 1.5rem;
+      max-width: 200px;
+      text-decoration: none;
+      text-align: center;
+      text-wrap: balance;
+    }
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 0.5rem 1rem;
+      }
+      .button,
+      .share-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+      }
+      .social {
+        margin-left: unset;
+      }
+      .social a {
+        margin-top: 16px;
+      }
+      .logo {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body
+  style="
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Inter, sans-serif;
+    color: #202225;
+  "
+>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <a
+    href="{{params.header_link|default:'https://www.cxgenie.ai/?utm_source=email&utm_campaign=email_header'}}"
+    target="_blank"
+  >
+    <div
+      style="
+        height: 72px;
+      background-image: url('{{params.header_url|default:'https://storage.cxgenie.ai/files/609910792c24981cdb7ff9998df62396.png'}}');
+      background-position: center;
+      background-size: cover;
+      "
+    ></div>
+  </a>
+  <div
+    style="background-color: {{params.background|default:'#e6ecfb'}}; padding: 2rem 1.25rem"
+  >
+    <div class="container">
+      <h1
+        style="
+          color: #2c2e33;
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+        "
+      >
+        You have been invited to {{params.workspace_name}}!
+      </h1>
+      <p
+        style="
+          margin-bottom: 1.5rem;
+          line-height: 1.5;
+          font-size: 0.875rem;
+          margin-top: 0;
+          margin-bottom: 1.25rem;
+        "
+      >
+        Dear {{params.name}},
+      </p>
+      <p
+        style="
+          margin-bottom: 1.5rem;
+          line-height: 1.5;
+          font-size: 0.875rem;
+          margin-top: 0;
+          margin-bottom: 1.25rem;
+        "
+      >
+        {{params.sender_name}} has invited you to {{params.workspace_name}}. You
+        can use this sign in information below to access the workspace
+      </p>
+      <div style="margin-bottom: 1.25rem">
+        <ul style="padding: 0; padding-left: 1.5rem">
+          <li
+            style="
+              line-height: 1.5;
+              font-size: 0.875rem;
+              margin-bottom: 0.25rem;
+            "
+          >
+            Email: {{params.email}}
+          </li>
+          <li
+            style="
+              line-height: 1.5;
+              font-size: 0.875rem;
+              margin-bottom: 0.25rem;
+            "
+          >
+            Password: {{params.password}}
+          </li>
+        </ul>
+      </div>
+      <a
+        href="{{params.link}}"
+        target="_blank"
+        style="
+          padding: 0.5rem 1rem;
+          background-color: {{params.theme_color|default:'#364de7'}};
+          max-width: 135px;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          font-weight: 600;
+          color: white !important;
+          text-decoration: none;
+          text-align: center;
+          display: block;
+          min-height: 24px;
+          margin: 0 auto;
+          display: flex;
+          line-height: 1.5;
+        "
+      >
+        Go to workspace
+      </a>
+    </div>
+  </div>
+  <br />
+</body>
