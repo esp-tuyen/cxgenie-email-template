@@ -262,7 +262,7 @@
           font-weight: 600;
         "
       >
-        Your CX Genie Team
+        {% if params.custom_domain %}Your Team{% else %}CX Genie Team{% endif %}
       </p>
     </div>
   </div>
@@ -272,7 +272,7 @@
         {%
         if
         not
-        params.is_custom_settings
+        params.custom_domain
         %}
         alt="CX Genie logo"
         {%
@@ -281,7 +281,7 @@
         src="{{params.footer_url|default:'https://storage.cxgenie.ai/files/56bb3a5a5a2179cbb80180d729998945.png'}}"
         style="aspect-ratio: 4; max-width: 128px"
       />
-      {% if not params.is_custom_settings %}
+      {% if not params.custom_domain %}
       <p
         style="
           margin-top: 0.5rem;
@@ -294,7 +294,7 @@
       </p>
       {% endif %}
     </div>
-    {% if not params.is_custom_settings %}
+    {% if not params.custom_domain %}
     <div style="display: flex; margin-left: auto">
       <a href="https://www.youtube.com/@CXGenie" target="_blank">
         <img
@@ -343,7 +343,7 @@
       <div style="display: flex; margin-bottom: 1rem">
         <img
           alt="email"
-          src="https://storage.cxgenie.ai/files/3ba396665ee54fcd70a239397444c3bc.png"
+          src="https://storage-cxg-uat.eastplayers-tool.dev/files/aefb1ca566f9438f8b585c0ecb5a2b1b.png"
           style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
         />
         <a
@@ -360,14 +360,16 @@
           >{{params.contact_email|default:'hello@cxgenie.ai'}}</a
         >
       </div>
+      {% if params.contact_company_address %}
       <div style="display: flex; margin-bottom: 1rem">
         <img
           alt="location"
-          src="https://storage.cxgenie.ai/files/4606f51bb9af77a36c0cc769b9807dff.png"
+          src="https://storage-cxg-uat.eastplayers-tool.dev/files/cf5c511cceb71c61f4e60fab8e6c106f.png"
           style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
         />
+
         <a
-          href="{{params.contact_company_address|default:'https://maps.google.com/maps?q=18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)'}}"
+          href="https://maps.google.com/maps?q={{params.contact_company_address}}"
           target="_blank"
           style="
             margin: 0;
@@ -378,19 +380,39 @@
             line-height: 1.5;
           "
         >
-          {{params.contact_company_address|default:'18 Sin Ming Lane, #07-13
-          Midview City, Singapore (573960)'}}
+          {{params.contact_company_address}}
         </a>
       </div>
-      {% if not params.is_custom_settings %}
-      <div style="display: flex">
+      {% endif %} {% if not params.custom_domain %}
+      <div style="display: flex; margin-bottom: 1rem">
         <img
           alt="location"
-          src="https://storage.cxgenie.ai/files/4606f51bb9af77a36c0cc769b9807dff.png"
+          src="https://storage-cxg-uat.eastplayers-tool.dev/files/cf5c511cceb71c61f4e60fab8e6c106f.png"
           style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
         />
         <a
           href="https://maps.google.com/maps?q=18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)"
+          target="_blank"
+          style="
+            margin: 0;
+            font-size: 14px;
+            text-decoration: none;
+            color: #c4c9d2;
+            margin-top: 2px;
+            line-height: 1.5;
+          "
+        >
+          18 Sin Ming Lane, #07-13 Midview City, Singapore (573960)
+        </a>
+      </div>
+      <div style="display: flex; margin-bottom: 1rem">
+        <img
+          alt="location"
+          src="https://storage-cxg-uat.eastplayers-tool.dev/files/cf5c511cceb71c61f4e60fab8e6c106f.png"
+          style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem"
+        />
+        <a
+          href="https://maps.google.com/maps?q=Level 2 - 11 York St, Sydney NSW 2000, Australia"
           target="_blank"
           style="
             margin: 0;
