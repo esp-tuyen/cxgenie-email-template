@@ -210,8 +210,8 @@
         "
       >
         For inquires or assistance with this conversation, contact us at
-        <a href="mailto:hello@cxgenie.ai" target="_blank" style="color: {{params.theme_color|default:'#364de7'}}"
-          >hello@cxgenie.ai</a
+        <a href="mailto:{{params.contact_email|default:'hello@cxgenie.ai'}}" target="_blank" style="color: {{params.theme_color|default:'#364de7'}}"
+          >{{params.contact_email|default:'hello@cxgenie.ai'}}</a
         >
         anytime.
       </p>
