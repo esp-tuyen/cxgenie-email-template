@@ -190,6 +190,7 @@
           support team is here to help. Feel free to reach out.
         </p>
 
+        {% if not params.custom_domain %}
         <div
           style="
             background-color: #f3f5fd;
@@ -243,7 +244,7 @@
             </span>
           </a>
         </div>
-
+        {% endif %}
         <p style="font-size: 0.875rem; margin-top: 0; margin-bottom: 0.5rem">
           Best Regards,
         </p>
