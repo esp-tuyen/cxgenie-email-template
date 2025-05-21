@@ -107,11 +107,11 @@
     >
       <div
         style="
-        height: 72px;
-        background-image: url('{{params.header_url|default:'https://storage.cxgenie.ai/files/f6684591c30d4d32519b6c180e89523b.png'}}');
-        background-position: center;
-        background-size: cover;
-      "
+          height: 72px;
+          background-image: url('{{params.header_url|default:'https://storage.cxgenie.ai/files/f6684591c30d4d32519b6c180e89523b.png'}}');
+          background-position: center;
+          background-size: cover;
+        "
       ></div>
     </a>
     <div
@@ -127,7 +127,7 @@
             margin-bottom: 1.5rem;
           "
         >
-          New conversation has been created!
+          Your conversation is already closed!
         </h1>
         <p
           style="
@@ -137,7 +137,7 @@
             margin-top: 0;
           "
         >
-          Hi {{params.name}},
+          Hi {{params.customer_name}},
         </p>
         <p
           style="
@@ -147,14 +147,16 @@
             margin-top: 0;
           "
         >
-          We hope this email finds you well. We wanted to inform you that a new
-          conversation has just been successfully created on your workspace.
+          We hope this email finds you well. We wanted to inform you that the
+          conversation has now been successfully closed on your workspace. Thank
+          you for your attention. If you have any further questions, feel free
+          to reach out.
         </p>
         <div
           style="
             margin-bottom: 1.5rem;
             padding: 1rem 0.75rem;
-            background-color: #f3f5fd;
+            background-color: {{params.background|default:'#f3f5fd'}};
             border-radius: 0.75rem;
           "
         >
@@ -188,12 +190,7 @@
             </li>
           </ul>
         </div>
-        <a
-          href="{{params.link}}"
-          class="button"
-          style="background-color: {{params.theme_color|default:'#364de7'}}"
-          >Go to conversation</a
-        >
+        <a href="{{params.link}}" class="button">Go to conversation</a>
 
         <hr style="border-top: 1px solid #cdd8f6; margin: 1.25rem 0" />
 
@@ -221,7 +218,7 @@
           <a
             href="mailto:{{params.contact_email|default:'hello@cxgenie.ai'}}"
             target="_blank"
-            style="color: #364de7"
+            style="color: {{params.theme_color|default:'#364de7'}}"
             >{{params.contact_email|default:'hello@cxgenie.ai'}}</a
           >
           anytime.
